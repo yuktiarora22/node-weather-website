@@ -13,7 +13,7 @@ const forecast = (latitude, longitude, callback) => {
       const dailyForecast = body.daily.data[0];
       callback(
         undefined,
-        `${dailyForecast.summary} It is currently ${currentlyForecast.temperature} degrees out. There is a ${currentlyForecast.precipProbability}% chance of rain.`
+        `${dailyForecast.summary} It is currently ${currentlyForecast.temperature} degrees out. There is a ${currentlyForecast.precipProbability}% chance of rain. The high today is ${dailyForecast.temperatureHigh} degrees and low today is ${dailyForecast.temperatureLow} degrees.`
       );
     }
   });
